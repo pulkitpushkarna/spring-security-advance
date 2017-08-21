@@ -18,6 +18,11 @@ repositories {
 
 dependencies {
     providedCompile 'javax.servlet:servlet-api:2.5', 'javax.servlet:jsp-api:2.0'
+
+    compile 'org.hibernate:hibernate-entitymanager:4.1.7.Final'
+    compile 'mysql:mysql-connector-java:5.1.13'
+    compile 'org.springframework.data:spring-data-jpa:1.11.4.RELEASE'
+
     compile 'org.springframework:spring-aspects:4.2.5.RELEASE'
     compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
     compile 'org.springframework.security:spring-security-web:4.2.3.RELEASE'

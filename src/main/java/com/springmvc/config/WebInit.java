@@ -1,13 +1,12 @@
 package com.springmvc.config;
 
-import org.springframework.context.annotation.Configuration;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-@Configuration
 public class WebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{RootConfig.class};
+        return new Class<?>[]{PersistenceConfig.class};
     }
 
     @Override
