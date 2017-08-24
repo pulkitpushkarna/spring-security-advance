@@ -6,12 +6,12 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class WebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{PersistenceConfig.class};
+        return new Class<?>[]{};
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[]{WebConfig.class};
+        return new Class<?>[]{WebConfig.class, PersistenceConfig.class};
     }
 
     @Override
