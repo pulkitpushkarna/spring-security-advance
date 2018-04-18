@@ -1,4 +1,4 @@
-package com.springmvc.config;
+package com.spring_security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.springmvc")
+@ComponentScan("com.spring_security")
 public class WebConfig extends WebMvcConfigurerAdapter{
 
 //    @Bean

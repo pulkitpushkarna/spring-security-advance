@@ -1,5 +1,6 @@
-package com.springmvc.config;
+package com.spring_security.config;
 
+import com.spring_security.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,11 +10,14 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    CustomUserDetailsService customUserDetailsService;
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder managerBuilder) throws Exception {
         managerBuilder
-                .inMemoryAuthentication()
-                .withUser("user").password("pass").roles("USER");
+                .userDetailsService(customUserDetailsService);
     }
 
     @Override

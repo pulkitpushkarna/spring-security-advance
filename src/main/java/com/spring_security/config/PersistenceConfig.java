@@ -1,4 +1,4 @@
-package com.springmvc.config;
+package com.spring_security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories("com.springmvc.repositories")
+@EnableJpaRepositories("com.spring_security.repositories")
 public class PersistenceConfig {
 
     @Bean
@@ -31,7 +31,7 @@ public class PersistenceConfig {
                 new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource);
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-        entityManagerFactoryBean.setPackagesToScan("com.springmvc.entity");
+        entityManagerFactoryBean.setPackagesToScan("com.spring_security.entity");
 
         Properties jpaProperties= new Properties();
         jpaProperties.setProperty("hibernate.dialect","org.hibernate.dialect.MySQLDialect");
