@@ -20,7 +20,7 @@ public class PersistenceConfig {
     DataSource dataSource(){
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/poc");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/spring_security_advance");
         driverManagerDataSource.setUsername("root");
         return driverManagerDataSource;
     }
