@@ -27,9 +27,15 @@ dependencies {
 
     compile 'org.springframework:spring-aspects:4.2.5.RELEASE'
     compile 'org.springframework:spring-webmvc:4.2.5.RELEASE'
+    compile 'org.springframework:spring-context-support:4.2.5.RELEASE'
 
     compile 'org.springframework.security:spring-security-web:4.2.3.RELEASE'
     compile 'org.springframework.security:spring-security-config:4.2.3.RELEASE'
+    compile 'org.springframework.security:spring-security-acl:4.2.3.RELEASE'
+    compile 'net.sf.ehcache:ehcache-core:2.6.11'
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
 
     def tomcatVersion = '7.0.57'
     tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
